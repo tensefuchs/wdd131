@@ -1,0 +1,132 @@
+/* === Theme + base reset === */
+:root{
+  --pink:#ff69b4;
+  --pink-soft:#ffe6f0;
+  --blue:#1e90ff;
+  --ink:#333;
+  --bg:#fff0f6;
+  --card:#ffffff;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family:'Roboto',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+/* === Header === */
+header{
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  color:#fff;
+  padding:.75rem 1rem;
+}
+
+#course-title,
+h1,h2{
+  /* headers only (Google Font linked in HTML) */
+  font-family:'Edu VIC WA NT Hand Precursive',cursive;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+#course-title{ display:block; font-size:1.6rem; }
+
+/* === Hamburger (mobile) === */
+.hamburger{
+  border:0;
+  background:transparent;
+  font-size:1.6rem;
+  line-height:1;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* === Nav (mobile first) === */
+.nav ul{
+  list-style:none;
+  margin:.5rem 0 0 0;
+  padding:0;
+  display:none;              /* hidden until opened */
+  flex-direction:column;     /* stacked on mobile */
+  gap:.25rem;
+}
+.nav.open ul{ display:flex; } /* toggled via JS */
+
+.nav a{
+  display:block;
+  padding:.5rem .75rem;
+  color:#fff;
+  text-decoration:none;
+  border-radius:.5rem;
+  font-weight:700;
+  transition:transform .2s ease, background-color .2s ease, color .2s ease;
+}
+.nav a:hover{
+  background-color: rgba(255,255,255,.18);
+  color:#ffccff;
+  transform: translateY(-1px);
+}
+.nav a:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:2px;
+}
+
+/* === Main layout === */
+main{
+  max-width:72rem;     /* limited width */
+  margin:1.25rem auto;
+  padding:0 1rem;
+}
+h1{ margin:.25rem 0 1rem 0; font-size:1.8rem; }
+
+/* === Gallery grid (one column on mobile) === */
+.gallery{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+}
+
+figure{
+  margin:0;
+  padding:.75rem;
+  background:var(--card);
+  border:2px solid var(--blue);
+  border-radius:12px;
+  box-shadow:0 4px 8px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+figure:hover{
+  transform: translateY(-3px);
+  box-shadow:0 8px 16px rgba(0,0,0,.12);
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  margin-bottom:.5rem;
+}
+
+figcaption{
+  color:var(--blue);
+  font-weight:700;
+}
+
+/* === Footer === */
+footer{
+  margin-top:2rem;
+  text-align:center;
+  background:#e8f2ff;
+  padding:1rem;
+  font-size:.95rem;
+}
+footer span{ color:#c06; }
