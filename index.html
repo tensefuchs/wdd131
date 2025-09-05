@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>WDD 131 – Dynamic Web Fundamentals – Supa-anan Fuchs</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Supa-anan Fuchs | Student in Düsseldorf, Germany | HTML, CSS, JavaScript practice with hobbies and interests." />
-  <meta name="author" content="Supa-anan Fuchs" />
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Supa-anan Fuchs | Student in Düsseldorf, Germany | Learning and practicing HTML, CSS, and JavaScript with responsive layouts, accessibility, and performance.">
+  <meta name="author" content="Supa-anan Fuchs">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Precursive&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts: preconnect + fonts stylesheet (audit requires preconnect links) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Precursive&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/base.css" />
-
-  <!-- JavaScript -->
+  <link rel="stylesheet" href="styles/base.css">
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
     <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <nav>
+      <!-- Original 4 -->
       <a href="https://www.linkedin.com/">LinkedIn</a>
       <a href="https://byupw.instructure.com/">Canvas</a>
       <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
       <a href="#">Final Project</a>
+      <!-- +3 more (now 7 total) -->
+      <a href="https://github.com/tensefuchs/wdd131">GitHub Repo</a>
+      <a href="https://tensefuchs.github.io/wdd131/">Live Site</a>
+      <a href="https://en.wikipedia.org/wiki/D%C3%BCsseldorf">About Düsseldorf</a>
     </nav>
   </header>
 
@@ -33,24 +37,22 @@
     <section class="card">
       <h2>About Me</h2>
       <img src="images/profile.jpg" alt="Photo of Supa-anan Fuchs">
-      <p>Hello! My name is <strong>Supa-anan Fuchs</strong>. I live in <strong>Düsseldorf, Germany</strong>. 
-      I am currently studying web development as part of WDD 131 and I am excited to improve my skills in HTML, CSS, and JavaScript.</p>
+      <p>Hello! My name is <strong>Supa-anan Fuchs</strong>. I live in <strong>Düsseldorf, Germany</strong>.
+      I am studying web development in WDD 131 and practicing modern HTML, CSS, and JavaScript.</p>
     </section>
 
     <section class="card">
       <h2>My Hobby</h2>
+      <!-- Make sure this filename matches exactly; you fixed it to .jpeg -->
       <img src="images/jellycats.jpeg" alt="Jellycat plush toys collection">
-      <p>One of my favorite hobbies is <strong>collecting Jellycats</strong>. 
-      These soft and quirky plush toys bring me joy and creativity. 
-      I love finding new Jellycats to add to my growing collection!</p>
+      <p>My hobby is <strong>collecting Jellycats</strong>—soft, quirky plush toys that spark joy and creativity.</p>
     </section>
   </main>
 
   <footer>
-    <p>
-      &copy; <span id="2025"></span> | Supa-anan Fuchs | Düsseldorf, Germany
-    </p>
+    <p>&copy; <span id="currentyear"></span> | Supa-anan Fuchs | Düsseldorf, Germany</p>
     <p id="lastModified"></p>
   </footer>
 </body>
 </html>
+
