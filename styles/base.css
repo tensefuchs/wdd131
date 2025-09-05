@@ -1,0 +1,101 @@
+/* Body uses Roboto for readability */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #fff0f6; /* light pink */
+  color: #333;
+}
+
+/* Headers use handwritten font */
+header,
+h1,
+h2 {
+  font-family: 'Edu VIC WA NT Hand Precursive', cursive;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #ff69b4, #1e90ff); /* pink → blue gradient */
+  color: #fff;
+  padding: 1rem;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffccff;
+}
+
+/* Main layout */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Cards */
+.card {
+  border: 2px solid #1e90ff; /* blue border */
+  padding: 1rem;
+  border-radius: 12px;
+  background: #ffe6f0; /* soft pink background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  color: #1e90ff; /* blue headings */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #1e90ff; /* blue footer */
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer span {
+  color: #ffb6c1; /* soft pink year highlight */
+}
