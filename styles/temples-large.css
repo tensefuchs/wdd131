@@ -1,21 +1,23 @@
-/* Loaded with media="(min-width: 48rem)" in HTML */
+/* Larger view overrides */
+@media only screen and (min-width: 48rem) {
 
-/* Hide hamburger, show horizontal nav */
-.hamburger{ display:none; }
+  /* Hide hamburger, show horizontal nav */
+  .hamburger { display: none; }
 
-.nav ul{
-  display:flex !important;   /* always visible on large screens */
-  flex-direction:row;
-  gap:1rem;
-  margin:.75rem 0 0 0;
+  .nav ul {
+    display: flex !important;   /* always visible on large screens */
+    flex-direction: row;
+    gap: 1rem;
+    margin: .75rem 0 0 0;
+  }
+
+  /* Gallery: 3 columns (adjust to taste) */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Slightly larger headings */
+  h1 { font-size: 2rem; }
+  #course-title { font-size: 1.8rem; }
 }
-
-/* Gallery: 3 columns (adjust to taste) */
-.gallery{
-  grid-template-columns: repeat(3, 1fr);
-  gap:1.25rem;
-}
-
-/* Slightly larger headings */
-h1{ font-size:2rem; }
-#course-title{ font-size:1.8rem; }
