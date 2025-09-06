@@ -1,11 +1,10 @@
 /* === Theme + base reset === */
 :root{
-  --pink:#ff69b4;
-  --pink-soft:#ffe6f0;
-  --blue:#1e90ff;
-  --ink:#333;
-  --bg:#fff0f6;
-  --card:#ffffff;
+  --pink:#ff69b4;        /* keeps your vibe; header uses darker contrast-safe colors */
+  --blue:#1e90ff;        /* used for borders (ok for non-text) */
+  --ink:#2b2b2b;         /* darker body text for contrast */
+  --bg:#fff0f6;          /* page background */
+  --card:#ffffff;        /* card background */
 }
 
 *{ box-sizing:border-box; }
@@ -17,16 +16,17 @@ body{
   line-height:1.6;
 }
 
-/* === Header === */
+/* === Header (contrast-safe gradient) === */
 header{
-  background:linear-gradient(90deg,var(--pink),var(--blue));
+  /* darker pink → darker blue so white text passes WCAG AA */
+  background: linear-gradient(90deg, #b4007f, #0050b3);
   color:#fff;
   padding:.75rem 1rem;
 }
 
 #course-title,
 h1,h2{
-  /* headers only (Google Font linked in HTML) */
+  /* headers use your Google hand font */
   font-family:'Edu VIC WA NT Hand Precursive',cursive;
 }
 
@@ -60,19 +60,19 @@ h1,h2{
 }
 .nav.open ul{ display:flex; } /* toggled via JS */
 
+/* Keep nav links readable on the dark header */
 .nav a{
   display:block;
   padding:.5rem .75rem;
-  color:#fff;
+  color:#fff;                        /* high contrast */
   text-decoration:none;
   border-radius:.5rem;
   font-weight:700;
   transition:transform .2s ease, background-color .2s ease, color .2s ease;
 }
 .nav a:hover{
-  background-color: rgba(255,255,255,.18);
-  color:#ffccff;
-  transform: translateY(-1px);
+  background-color: rgba(255,255,255,.15); /* subtle, no layout shift */
+  color:#fff;
 }
 .nav a:focus-visible{
   outline:2px solid #fff;
@@ -85,7 +85,8 @@ main{
   margin:1.25rem auto;
   padding:0 1rem;
 }
-h1{ margin:.25rem 0 1rem 0; font-size:1.8rem; }
+h1{ margin:.25rem 0 .25rem 0; font-size:1.8rem; }
+h2{ margin:0 0 1rem 0; font-size:1.25rem; color:#444; }
 
 /* === Gallery grid (one column on mobile) === */
 .gallery{
@@ -116,8 +117,9 @@ img{
   margin-bottom:.5rem;
 }
 
+/* AA-contrast caption on white */
 figcaption{
-  color:var(--blue);
+  color:#0a58ca; /* ~6.4:1 on white */
   font-weight:700;
 }
 
@@ -130,3 +132,12 @@ footer{
   font-size:.95rem;
 }
 footer span{ color:#c06; }
+
+/* Accessible link colors on light backgrounds (outside header) */
+a{ color:#0a58ca; }
+a:visited{ color:#084298; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; }
+}
