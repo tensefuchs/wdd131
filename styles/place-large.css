@@ -1,0 +1,16 @@
+@media only screen and (min-width: 48rem){
+  .info-grid{
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
+  }
+
+  /* Hide the SVG icon on large screens and show a pseudo-element instead */
+  .weather .wx-icon{ display:none; }
+
+  .weather h2::after{
+    content:" ⛅";
+    font-size:1.25em;
+    vertical-align:middle;
+    margin-left:.25rem;
+  }
+}

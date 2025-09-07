@@ -1,0 +1,90 @@
+:root{
+  /* tweak these to match your place’s palette */
+  --ink:#2b2b2b;
+  --bg:#fff7fb;              /* very light pink */
+  --card:#ffffff;
+  --accent1:#b4007f;         /* darker pink (contrast-safe) */
+  --accent2:#0050b3;         /* darker blue (contrast-safe) */
+  --link:#0a58ca;            /* AA on white */
+  --link-hover:#084298;
+  --border:#1e90ff;          /* for non-text borders */
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+h1,h2,#site-title{
+  font-family:'Edu VIC WA NT Hand Precursive',cursive;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff;
+  padding:.75rem 1rem;
+}
+#site-title{ font-size:1.4rem; display:block; }
+
+.crumbs{
+  margin-top:.3rem;
+}
+.crumbs a{
+  color:#fff; text-decoration:underline;
+}
+.crumbs a:hover{ text-decoration:none; }
+
+/* Layout */
+main{
+  max-width:72rem;
+  margin:1rem auto 2rem;
+  padding:0 1rem;
+}
+h1{ margin:.25rem 0 1rem; font-size:1.9rem; }
+
+.hero img{
+  width:100%; height:auto; display:block; border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  border:2px solid var(--border);
+}
+
+/* Cards grid (1 column on mobile) */
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+  margin-top:1rem;
+}
+.card{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:1rem;
+  box-shadow:0 4px 10px rgba(0,0,0,.06);
+}
+.facts{
+  list-style:none; padding:0; margin:0;
+}
+.facts li{ padding:.3rem 0; }
+.facts span{ font-weight:700; }
+
+/* Weather */
+.weather .wx-icon{ width:64px; height:64px; }
+.wx p{ margin:.25rem 0; }
+
+a{ color:var(--link); }
+a:hover{ color:var(--link-hover); }
+
+footer{
+  margin-top:2rem; text-align:center; background:#e8f2ff; padding:1rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; }
+}
