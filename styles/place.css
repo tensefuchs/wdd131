@@ -1,5 +1,5 @@
 :root{
-  /* tweak these to match your place’s palette */
+  /* tweak these to your palette */
   --ink:#2b2b2b;
   --bg:#fff7fb;              /* very light pink */
   --card:#ffffff;
@@ -7,7 +7,7 @@
   --accent2:#0050b3;         /* darker blue (contrast-safe) */
   --link:#0a58ca;            /* AA on white */
   --link-hover:#084298;
-  --border:#1e90ff;          /* for non-text borders */
+  --border:#1e90ff;          /* borders (non-text) */
 }
 
 *{ box-sizing:border-box; }
@@ -30,13 +30,8 @@ h1,h2,#site-title{
   padding:.75rem 1rem;
 }
 #site-title{ font-size:1.4rem; display:block; }
-
-.crumbs{
-  margin-top:.3rem;
-}
-.crumbs a{
-  color:#fff; text-decoration:underline;
-}
+.crumbs{ margin-top:.3rem; }
+.crumbs a{ color:#fff; text-decoration:underline; }
 .crumbs a:hover{ text-decoration:none; }
 
 /* Layout */
@@ -47,6 +42,7 @@ main{
 }
 h1{ margin:.25rem 0 1rem; font-size:1.9rem; }
 
+/* Hero */
 .hero img{
   width:100%; height:auto; display:block; border-radius:12px;
   box-shadow:0 4px 10px rgba(0,0,0,.08);
@@ -67,19 +63,19 @@ h1{ margin:.25rem 0 1rem; font-size:1.9rem; }
   padding:1rem;
   box-shadow:0 4px 10px rgba(0,0,0,.06);
 }
-.facts{
-  list-style:none; padding:0; margin:0;
-}
+.facts{ list-style:none; padding:0; margin:0; }
 .facts li{ padding:.3rem 0; }
 .facts span{ font-weight:700; }
 
 /* Weather */
-.weather .wx-icon{ width:64px; height:64px; }
+.weather .wx-icon{ width:64px; height:64px; display:block; }
 .wx p{ margin:.25rem 0; }
 
+/* Links (outside header) */
 a{ color:var(--link); }
 a:hover{ color:var(--link-hover); }
 
+/* Footer */
 footer{
   margin-top:2rem; text-align:center; background:#e8f2ff; padding:1rem;
 }

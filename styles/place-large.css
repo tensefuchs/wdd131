@@ -4,9 +4,10 @@
     align-items:start;
   }
 
-  /* Hide the SVG icon on large screens and show a pseudo-element instead */
+  /* SVG weather icon: mobile-only (hide on large) */
   .weather .wx-icon{ display:none; }
 
+  /* Emoticon pseudo-element appears only on large view */
   .weather h2::after{
     content:" ⛅";
     font-size:1.25em;
