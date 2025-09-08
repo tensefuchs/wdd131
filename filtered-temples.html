@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Filtered Temples – Supa-anan Fuchs</title>
+  <meta name="description" content="WDD 131: Filterable temple cards generated from a JavaScript array with lazy-loaded images." />
+  <meta name="author" content="Supa-anan Fuchs" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Precursive&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <!-- JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span id="course-title">Temple Album (Filtered)</span>
+      <button id="menuButton" class="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+    <nav id="primaryNav" class="nav" aria-label="Filters">
+      <ul>
+        <li><a href="#" data-filter="home" class="active">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temples</h1>
+    <!-- Cards will be injected here -->
+    <section id="cards" class="cards" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Supa-anan Fuchs | Düsseldorf, Germany</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
