@@ -13,11 +13,11 @@ const temples = [
   { templeName: "Salt Lake Temple",            location: "Salt Lake City, Utah, USA",   dedicated: "1893-04-06", area: 253000, imageUrl: base + "salt-lake-1893.jpg" },
   { templeName: "St. George Utah Temple",      location: "St. George, Utah, USA",       dedicated: "1877-04-06", area: 110000, imageUrl: base + "st-george-1877.jpg" },
   { templeName: "Manti Utah Temple",           location: "Manti, Utah, USA",            dedicated: "1893-05-21", area: 100000, imageUrl: base + "manti-1893.jpg" },
-  { templeName: "Bern Switzerland Temple",     location: "Zollikofen, Switzerland",     dedicated: "1955-09-11", area: 35000,  imageUrl: base + "bern-switzerland-1955.jpeg" },
+  { templeName: "Bern Switzerland Temple",     location: "Zollikofen, Switzerland",     dedicated: "1955-09-11", area: 35000,  imageUrl: base + "bern-switzerland-1955.jpg" },
   { templeName: "Portland Oregon Temple",      location: "Lake Oswego, Oregon, USA",    dedicated: "1989-08-19", area: 80700,  imageUrl: base + "portland-oregon-1989.jpg" },
   { templeName: "Baton Rouge Louisiana Temple",location: "Baton Rouge, Louisiana, USA", dedicated: "2000-07-16", area: 10700,  imageUrl: base + "baton-rouge-2000.jpg" },
   { templeName: "Newport Beach California Temple", location: "Newport Beach, California, USA", dedicated: "2005-08-28", area: 17600, imageUrl: base + "newport-beach-2005.jpg" },
-  { templeName: "Kyiv Ukraine Temple",         location: "Kyiv, Ukraine",               dedicated: "2010-08-29", area: 21960,  imageUrl: base + "kiev-2010.jpeg" },
+  { templeName: "Kyiv Ukraine Temple",         location: "Kyiv, Ukraine",               dedicated: "2010-08-29", area: 21960,  imageUrl: base + "kiev-2010.jpg" },
   { templeName: "Provo City Center Temple",    location: "Provo, Utah, USA",            dedicated: "2016-03-20", area: 85000,  imageUrl: base + "provo-city-center-2016.jpg" },
 
   // 3+ additional temples (with placeholder images you already have)
