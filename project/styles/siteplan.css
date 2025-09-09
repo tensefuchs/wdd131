@@ -1,0 +1,108 @@
+:root{
+  /* Contrast-safe blues */
+  --ink:#1f2937;         /* dark body text */
+  --bg:#f5f9ff;          /* very light blue */
+  --card:#ffffff;
+  --accent1:#0b3d91;     /* header gradient start */
+  --accent2:#0050b3;     /* header gradient end / buttons */
+  --link:#0a58ca;        /* AA on white */
+  --link-hover:#084298;  /* darker hover */
+  --border:#1e90ff;      /* non-text border */
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+}
+
+h1,h2,h3,#site-title{
+  font-family:'Edu VIC WA NT Hand Precursive',cursive;
+  margin:0 0 .5rem;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff;
+  padding:1rem;
+}
+.brand{ max-width:72rem; margin:0 auto; }
+#site-title{ display:block; font-size:1.8rem; }
+.tagline{ display:block; opacity:.9; }
+
+/* Main container */
+.container{
+  max-width:72rem;
+  margin:1rem auto 2.5rem;
+  padding:0 1rem;
+}
+section{ margin:1.25rem 0 2rem; }
+.note{ background:#eef5ff; border-left:4px solid var(--border); padding:.75rem; border-radius:.25rem; }
+.muted{ color:#475569; }
+
+/* Swatches */
+.swatches{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap:.75rem;
+  margin:1rem 0;
+}
+.swatch{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:.75rem;
+}
+.swatch .box{
+  width:100%;
+  height:70px;
+  border-radius:.5rem;
+  background:var(--bg);     /* overridden inline with --bg */
+  border:1px solid #cbd5e1;
+  margin-bottom:.5rem;
+}
+.usage{ margin:.5rem 0 0 1rem; }
+
+/* Typography samples */
+.type-samples{
+  display:grid; gap:.75rem;
+  grid-template-columns:1fr;
+}
+.sample-head{ font-size:1.5rem; }
+code{ background:#eef5ff; padding:.1rem .3rem; border-radius:.25rem; }
+
+/* Wireframes */
+.wireframes{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:1fr;
+}
+.wireframes figure{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:.75rem;
+}
+.wireframes figcaption{
+  font-weight:700; margin-bottom:.5rem;
+}
+svg{ width:100%; height:auto; display:block; }
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  background:#e6f0ff;
+  color:var(--ink);
+  padding:1rem;
+  font-size:.95rem;
+}
+
+/* Larger screens */
+@media (min-width: 48rem){
+  .type-samples{ grid-template-columns:1fr 1fr; }
+  .wireframes{ grid-template-columns:1fr 1fr; }
+}
