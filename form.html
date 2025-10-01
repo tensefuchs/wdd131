@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Review – Jellycat Collector</title>
+  <meta name="description" content="WDD 131 product review form with dynamic product list, star rating, and accessible design." />
+  <meta name="author" content="Supa-anan Fuchs" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Precursive&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span id="site-title">Jellycat Collector</span>
+      <span class="tagline">Product Review</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Product Review</h1>
+
+    <form method="get" action="review.html" class="review-form" novalidate>
+      <!-- Product -->
+      <div class="field">
+        <label for="product">Product Name <span aria-hidden="true" class="req">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product …</option>
+          <!-- Options injected by scripts/form.js -->
+        </select>
+      </div>
+
+      <!-- Rating -->
+      <fieldset class="field">
+        <legend>Overall Rating <span aria-hidden="true" class="req">*</span></legend>
+        <!-- Radios share the SAME name so they act as one group -->
+        <div class="stars" role="radiogroup" aria-label="Overall rating">
+          <!-- Order 5→1 for nicer keyboard/visual star fill -->
+          <input type="radio" id="rate5" name="rating" value="5" required>
+          <label for="rate5" aria-label="5 stars">★</label>
+
+          <input type="radio" id="rate4" name="rating" value="4" required>
+          <label for="rate4" aria-label="4 stars">★</label>
+
+          <input type="radio" id="rate3" name="rating" value="3" required>
+          <label for="rate3" aria-label="3 stars">★</label>
+
+          <input type="radio" id="rate2" name="rating" value="2" required>
+          <label for="rate2" aria-label="2 stars">★</label>
+
+          <input type="radio" id="rate1" name="rating" value="1" required>
+          <label for="rate1" aria-label="1 star">★</label>
+        </div>
+      </fieldset>
+
+      <!-- Installation date -->
+      <div class="field">
+        <label for="install">Date of Installation <span aria-hidden="true" class="req">*</span></label>
+        <input type="date" id="install" name="install" required>
+      </div>
+
+      <!-- Useful features (checkboxes) -->
+      <fieldset class="field">
+        <legend>Useful Features (check all that apply)</legend>
+
+        <div class="checks">
+          <div class="check">
+            <input type="checkbox" id="feat-durability" name="features" value="Durability">
+            <label for="feat-durability">Durability</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="feat-ease" name="features" value="Ease of use">
+            <label for="feat-ease">Ease of use</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="feat-perf" name="features" value="Performance">
+            <label for="feat-perf">Performance</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="feat-aesthetic" name="features" value="Aesthetics">
+            <label for="feat-aesthetic">Aesthetics</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="feat-value" name="features" value="Value">
+            <label for="feat-value">Value</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Written review (optional) -->
+      <div class="field">
+        <label for="review">Written Review (optional)</label>
+        <textarea id="review" name="review" rows="6" placeholder="Share your thoughts…"></textarea>
+      </div>
+
+      <!-- User name (optional) -->
+      <div class="field">
+        <label for="username">Your Name (optional)</label>
+        <input type="text" id="username" name="username" autocomplete="name" placeholder="Supa-anan Fuchs">
+      </div>
+
+      <div class="actions">
+        <input type="submit" value="Submit Review" class="primary">
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> | Supa-anan Fuchs | Düsseldorf, Germany</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* Blue theme, WCAG AA contrast */
+:root{
+  --ink:#1f2937;      /* dark text */
+  --bg:#f5f9ff;       /* very light blue page bg */
+  --card:#ffffff;
+  --accent1:#0b3d91;  /* header gradient start */
+  --accent2:#0050b3;  /* header gradient end / primary */
+  --link:#0a58ca;     /* accessible blue on white */
+  --link-hover:#084298;
+  --border:#1e90ff;   /* accents/borders */
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+h1,#site-title{ font-family:'Edu VIC WA NT Hand Precursive',cursive; }
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:#fff;
+  padding:1rem;
+}
+.brand{ max-width:56rem; margin:0 auto; }
+#site-title{ font-size:1.6rem; display:block; }
+.tagline{ opacity:.9; }
+
+/* Layout */
+.container{
+  max-width:56rem;
+  margin:1rem auto 2rem;
+  padding:0 1rem;
+}
+h1{ margin:.25rem 0 1rem; font-size:1.9rem; }
+
+/* Form */
+.review-form{
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:1rem;
+  box-shadow:0 6px 14px rgba(0,0,0,.06);
+  display:grid;
+  gap:1rem;
+}
+
+.field{ display:grid; gap:.4rem; }
+label, legend{ font-weight:700; }
+
+input[type="text"],
+input[type="date"],
+select,
+textarea{
+  background:#fff;
+  color:var(--ink);
+  border:1px solid #cbd5e1;
+  border-radius:.6rem;
+  padding:.6rem .65rem;
+  font:inherit;
+}
+
+textarea{ resize:vertical; min-height:8rem; }
+
+/* Focus */
+input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--accent2);
+  outline-offset:2px;
+}
+
+/* Required hint */
+.req{ color:#b91c1c; }
+
+/* Stars (radio group) */
+.stars{
+  display:flex;
+  flex-direction:row-reverse; /* so 5 on left visually when tabbing */
+  gap:.35rem;
+  justify-content:flex-start;
+}
+.stars input{
+  position:absolute;
+  opacity:0;
+}
+.stars label{
+  font-size:1.8rem;
+  cursor:pointer;
+  color:#94a3b8; /* gray when not selected */
+  transition:transform .1s ease, color .1s ease;
+}
+.stars label:hover,
+.stars label:focus{
+  transform:scale(1.08);
+}
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label{
+  color:#ffb400; /* gold */
+}
+
+/* Checkboxes */
+.checks{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:.35rem;
+}
+.check{
+  display:flex; align-items:center; gap:.5rem;
+}
+.check input{
+  width:1.1rem; height:1.1rem;
+}
+
+/* Actions */
+.actions{
+  display:flex; gap:.5rem; align-items:center; justify-content:flex-start;
+}
+.primary{
+  background:var(--accent2);
+  color:#fff;
+  border:0;
+  border-radius:.65rem;
+  padding:.65rem .95rem;
+  font-weight:700;
+  cursor:pointer;
+}
+.primary:hover{ filter:brightness(1.05); }
+.primary:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  background:#e6f0ff;
+  color:var(--ink);
+  padding:1rem;
+  font-size:.95rem;
+  margin-top:2rem;
+}
+
+/* Larger layout: two columns where it helps */
+@media (min-width: 48rem){
+  .review-form{
+    grid-template-columns:1fr 1fr;
+  }
+  .actions{ grid-column:1 / -1; }
+  /* Make some fields span both columns */
+  .field:nth-of-type(4),
+  .field:nth-of-type(5){
+    grid-column:1 / -1;
+  }
+}

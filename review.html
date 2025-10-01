@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You – Review Submitted</title>
+  <meta name="description" content="Confirmation page for the product review form with a persistent submission counter." />
+  <meta name="author" content="Supa-anan Fuchs" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand+Precursive&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script defer src="scripts/review.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span id="site-title">Jellycat Collector</span>
+      <span class="tagline">Review Submitted</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Thank you! 🎉</h1>
+    <p>Your review has been submitted successfully.</p>
+
+    <section class="review-form" aria-labelledby="summary">
+      <h2 id="summary">Submission Summary</h2>
+      <dl class="summary">
+        <dt>Product</dt>   <dd id="s-product">—</dd>
+        <dt>Rating</dt>    <dd id="s-rating">—</dd>
+        <dt>Installed</dt> <dd id="s-install">—</dd>
+        <dt>Features</dt>  <dd id="s-features">—</dd>
+        <dt>Review</dt>    <dd id="s-review">—</dd>
+        <dt>Name</dt>      <dd id="s-username">—</dd>
+      </dl>
+    </section>
+
+    <section class="card review-form" aria-labelledby="counter-title">
+      <h2 id="counter-title">Reviews Completed</h2>
+      <p>You have submitted <strong id="counter">0</strong> review(s) on this device.</p>
+      <p><a href="form.html">Submit another review</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> | Supa-anan Fuchs | Düsseldorf, Germany</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
